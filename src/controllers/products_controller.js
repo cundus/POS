@@ -5,7 +5,7 @@ const { successResponse, errorResponse } = require("../helper/response");
 exports.Add = async (req, res) => {
    try {
       const { name, price } = req.body;
-      const { file } = req.file;
+      const { file } = req;
 
       if (!file) {
          return errorResponse(res, 400, "No image found, please upload image!");
@@ -14,7 +14,7 @@ exports.Add = async (req, res) => {
       await db.query(
          `
       INSERT INTO products (name, image, price) VALUES
-     ('${name}', '${file.filename}', ${price}), 
+     ('${name}', '/uploads/${file.filename}', ${price})
       `,
          { type: QueryTypes.INSERT }
       );
