@@ -6,8 +6,8 @@ This is a simple Express.js API created for a technical test.
 
 <!-- Ganti github usernamenya dandirectorynya -->
 
-1. Clone the repository: `git clone https://github.com/your-username/pos-api.git`
-2. Navigate to the project directory: `cd pos-api`
+1. Clone the repository: `git clone https://github.com/your-username/POS.git`
+2. Navigate to the project directory: `cd POS`
 3. Install dependencies: `npm install`
 4. Start the server: `npm start`
 5. Access the API at `http://localhost:3010`
